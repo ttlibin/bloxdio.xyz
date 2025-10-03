@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloxd io - The Ultimate Multiplayer Voxel Gaming Experience</title>
+    <meta name="description" content="Play Bloxd io - the revolutionary free-to-play multiplayer online game combining Minecraft creativity with .io game competition. Experience voxel-based worlds with parkour, building, and combat modes.">
+    <meta name="keywords" content="bloxd io, bloxd io game, multiplayer voxel game, browser game, parkour game, minecraft io game, free online game, voxel gaming">
+    <meta name="author" content="Bloxd io Team">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="en">
+    <meta name="revisit-after" content="7 days">
+    <meta name="google-adsense-account" content="ca-pub-1893638941587898">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Bloxd io - Ultimate Multiplayer Voxel Gaming">
+    <meta property="og:description" content="Experience the revolutionary Bloxd io game with parkour, building, and combat modes. Play free in your browser!">
+    <meta property="og:url" content="https://bloxdio.xyz">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://bloxdio.xyz/images/bloxd-io-preview.jpg">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Favicon and Icons -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "VideoGame",
+        "name": "Bloxd io",
+        "description": "Revolutionary free-to-play multiplayer online game combining Minecraft creativity with .io game competition",
+        "genre": ["Sandbox", "Multiplayer", "Action", "Creative"],
+        "gamePlatform": "Web Browser",
+        "operatingSystem": "Any",
+        "applicationCategory": "Game",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Bloxd io Team"
+        },
+        "datePublished": "2021-02-01",
+        "url": "https://bloxdio.xyz",
+        "sameAs": [
+            "https://discord.gg/bloxdio",
+            "https://twitter.com/BloxdioGame"
+        ]
+    }
+    </script>
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BZS42LKQ8J"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-BZS42LKQ8J');
+    </script>
+    
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1893638941587898"
+         crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- 加载动画 -->
+    <div class="loading-spinner" id="loadingSpinner">
+        <div>
+            <div class="spinner"></div>
+            <div class="loading-text">Loading Bloxd io...</div>
+        </div>
+    </div>
+
+    <!-- 网站标题栏 - 极简风格 -->
+    <header class="site-header">
+        <div class="header-container">
+            <!-- Logo区域 -->
+            <div class="header-logo">
+                <div class="logo-icon">🎮</div>
+                <div class="logo-text">Bloxd io</div>
+            </div>
+            
+            <!-- 核心导航 -->
+            <nav class="header-nav">
+                <a href="#play" class="nav-link active">🎮 Play</a>
+                <a href="#modes" class="nav-link">🎯 Modes</a>
+                <a href="#guide" class="nav-link">📖 Guide</a>
+                <a href="#faq" class="nav-link">❓ FAQ</a>
+                <a href="about.html" class="nav-link">ℹ️ About</a>
+            </nav>
+            
+            
+            <!-- 移动端菜单按钮 -->
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <span class="menu-line"></span>
+                <span class="menu-line"></span>
+                <span class="menu-line"></span>
+            </button>
+        </div>
+        
+        <!-- 移动端菜单 -->
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="mobile-nav">
+                <a href="#play" class="mobile-nav-link">🎮 Play</a>
+                <a href="#modes" class="mobile-nav-link">🎯 Modes</a>
+                <a href="#guide" class="mobile-nav-link">📖 Guide</a>
+                <a href="#faq" class="mobile-nav-link">❓ FAQ</a>
+                <a href="about.html" class="mobile-nav-link">ℹ️ About</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 顶部游戏区域 -->
+    <section id="play" class="hero-game-section">
+        <div class="game-wrapper">
+            <div class="game-container">
+                <iframe src="https://bloxdio.io/bloxd-io.embed" 
+                        width="100%" 
+                        height="800px" 
+                        frameborder="0"
+                        allowfullscreen
+                        loading="lazy"
+                        title="Bloxd.io Game">
+                </iframe>
+            </div>
+            <div class="game-controls">
+                <button class="btn-fullscreen" onclick="toggleFullscreen()">⛶ Fullscreen</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 游戏介绍区域 -->
+    <section class="game-intro">
+        <div class="container">
+            <h1>What is Bloxd io?</h1>
+            <p><strong>Bloxd io</strong> is a revolutionary free-to-play multiplayer online game that combines the creative freedom of Minecraft with the competitive excitement of .io games. Launched in February 2021 by developer Arthur, <strong>Bloxd io</strong> has quickly become one of the most popular browser-based gaming platforms, offering players an immersive voxel-based world where creativity meets competition.</p>
+            
+            <p>This innovative <strong>Bloxd io</strong> game features stunning Minecraft-inspired graphics and provides players with an extensive array of game modes, from intense parkour challenges to peaceful creative building sessions. Whether you're a seasoned gamer or new to the voxel gaming scene, <strong>Bloxd io</strong> offers something for everyone in its dynamic multiplayer environment.</p>
+        </div>
+    </section>
+
+    <!-- 广告位 - 横幅广告 -->
+    <section class="ad-section">
+        <div class="container">
+            <div class="ad-banner">
+                <!-- AdSense 横幅广告 -->
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-1893638941587898"
+                     data-ad-slot="1234567890"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+        </div>
+    </section>
+
+    <!-- 游戏模式展示 -->
+    <section id="modes" class="game-modes">
+        <div class="container">
+            <h2>Game Features That Make Bloxd io Special</h2>
+            
+            <div class="modes-grid">
+                <div class="mode-card">
+                    <h3>BloxdHop.io Mode</h3>
+                    <p>This exciting parkour mode challenges players to navigate through intricate obstacle courses within strict time limits. Players must master precise jumping techniques and timing to reach the end of each map successfully.</p>
+                </div>
+                
+                <div class="mode-card">
+                    <h3>DoodleCube Creative Mode</h3>
+                    <p>Similar to popular drawing games like Gartic.io, this <strong>Bloxd io</strong> mode allows players to express their creativity by building objects based on given themes. Players vote on the most representative creations.</p>
+                </div>
+                
+                <div class="mode-card">
+                    <h3>EvilTower Challenge</h3>
+                    <p>Inspired by Roblox's Tower of Hell, this <strong>Bloxd io</strong> mode presents players with randomly generated towers filled with deadly traps and obstacles. Players must carefully navigate upward, avoiding red blocks.</p>
+                </div>
+                
+                <div class="mode-card">
+                    <h3>Peaceful Creative Mode</h3>
+                    <p>For players who prefer a more relaxed experience, <strong>Bloxd io</strong> offers a peaceful mode similar to Minecraft's creative mode. Players can freely collect resources and build magnificent structures.</p>
+                </div>
+                
+                <div class="mode-card">
+                    <h3>CubeWarfare Combat</h3>
+                    <p>This intense third-person shooter mode combines traditional FPS gameplay with <strong>Bloxd io</strong>'s signature building mechanics. Players can construct defensive structures while engaging in fast-paced combat.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 游戏指南 -->
+    <section id="guide" class="game-guide">
+        <div class="container">
+            <h2>How to Play Bloxd io - Complete Guide</h2>
+            
+            <div class="guide-content">
+                <div class="guide-section">
+                    <h3>Getting Started with Bloxd io</h3>
+                    <ol>
+                        <li><strong>Access the Game</strong>: Visit <a href="https://bloxdio.xyz">bloxdio.xyz</a> in your web browser</li>
+                        <li><strong>Create Your Account</strong>: Choose a unique username and password to save your progress</li>
+                        <li><strong>Select Your Game Mode</strong>: Browse through the available <strong>Bloxd io</strong> game modes and choose one that matches your interests</li>
+                        <li><strong>Customize Your Avatar</strong>: Use the in-game shop to personalize your character's appearance</li>
+                    </ol>
+                </div>
+                
+                <div class="guide-section">
+                    <h3>Essential Bloxd io Controls</h3>
+                    <div class="controls-grid">
+                        <div class="control-group">
+                            <h4>Basic Movement Controls</h4>
+                            <ul>
+                                <li><strong>WASD Keys</strong>: Move your character in all directions</li>
+                                <li><strong>Spacebar</strong>: Jump (essential for parkour modes)</li>
+                                <li><strong>Shift Key</strong>: Run or sprint for faster movement</li>
+                                <li><strong>C, Z, \, or Caps Lock</strong>: Crouch to avoid obstacles</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="control-group">
+                            <h4>Interaction Controls</h4>
+                            <ul>
+                                <li><strong>Left Mouse Button</strong>: Place blocks or attack enemies</li>
+                                <li><strong>Right Mouse Button</strong>: Destroy blocks or aim weapons</li>
+                                <li><strong>T or Enter</strong>: Open chat to communicate with other players</li>
+                                <li><strong>B Key</strong>: Access the in-game shop</li>
+                                <li><strong>P Key</strong>: Switch between first-person and third-person perspectives</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="guide-section">
+                    <h3>Game Mode Specific Strategies</h3>
+                    <div class="strategy-grid">
+                        <div class="strategy-item">
+                            <h4>BloxdHop.io Strategy</h4>
+                            <p>Focus on maintaining momentum and using checkpoints strategically. Practice precise jumping and learn to read the course layout quickly.</p>
+                        </div>
+                        
+                        <div class="strategy-item">
+                            <h4>DoodleCube Tips</h4>
+                            <p>Start with simple shapes and gradually add details. Use different block types to create texture and depth in your creations.</p>
+                        </div>
+                        
+                        <div class="strategy-item">
+                            <h4>EvilTower Approach</h4>
+                            <p>Take your time to observe patterns in the tower generation. Look for safe paths and avoid rushing, as one mistake can cost you significant progress.</p>
+                        </div>
+                        
+                        <div class="strategy-item">
+                            <h4>CubeWarfare Tactics</h4>
+                            <p>Balance between aggressive combat and defensive building. Use your environment to create cover and ambush opportunities.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 为什么选择Bloxd.io -->
+    <section class="why-choose">
+        <div class="container">
+            <h2>Why Choose Bloxd io for Your Gaming Experience?</h2>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>Unmatched Accessibility</h3>
+                    <p><strong>Bloxd io</strong> revolutionizes online gaming by eliminating barriers to entry. Unlike traditional games that require expensive hardware or lengthy downloads, <strong>Bloxd io</strong> runs directly in your web browser. This means you can start playing immediately on any device with internet access.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>Creative Freedom and Expression</h3>
+                    <p>The <strong>Bloxd io</strong> platform provides unprecedented creative freedom through its various building modes. Players can construct elaborate structures, design intricate parkour courses, or create artistic masterpieces in DoodleCube mode.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>Social Gaming at Its Best</h3>
+                    <p><strong>Bloxd io</strong> excels in creating meaningful social connections through its multiplayer features. Players can team up with friends for cooperative building projects, compete in intense PvP matches, or simply hang out in peaceful mode.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>Regular Content Updates</h3>
+                    <p>The <strong>Bloxd io</strong> development team consistently delivers fresh content, including new game modes, seasonal events, and community-requested features. This commitment to ongoing development ensures that the game remains engaging and relevant.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ区域 -->
+    <section id="faq" class="faq-section">
+        <div class="container">
+            <h2>Frequently Asked Questions About Bloxd io</h2>
+            
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>What Makes Bloxd io Different from Other .io Games?</h3>
+                    <p><strong>Bloxd io</strong> distinguishes itself through its unique combination of creative building elements and competitive gameplay. While most .io games focus solely on combat or simple mechanics, <strong>Bloxd io</strong> offers a comprehensive gaming experience that includes building, parkour, art creation, and strategic combat.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Is Bloxd io Safe for Younger Players?</h3>
+                    <p><strong>Bloxd io</strong> implements several safety features, including chat moderation and reporting systems. The game is designed to be family-friendly, with appropriate content for players of all ages. Parents can monitor their children's gameplay through the account system.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Can I Play Bloxd io Offline?</h3>
+                    <p><strong>Bloxd io</strong> is primarily an online multiplayer game, but some creative modes can be enjoyed in single-player sessions. However, the full <strong>Bloxd io</strong> experience requires an internet connection to access all features and game modes.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>How Often Does Bloxd io Receive Updates?</h3>
+                    <p>The <strong>Bloxd io</strong> development team typically releases updates every few weeks, including bug fixes, new features, and seasonal content. Major updates that introduce new game modes or significant changes are usually released quarterly.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>What Are the System Requirements for Bloxd io?</h3>
+                    <p><strong>Bloxd io</strong> is designed to run on virtually any modern device with a web browser. The game requires minimal system resources, making it accessible to players with older computers or mobile devices. A stable internet connection is the primary requirement for optimal gameplay.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Can I Create Custom Content in Bloxd io?</h3>
+                    <p>Yes! <strong>Bloxd io</strong> encourages community creativity through various content creation tools. Players can design custom parkour courses, create unique building projects, and even develop their own game modes using the available tools and APIs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Bloxd io</h3>
+                    <p>The ultimate multiplayer voxel gaming experience. Play free in your browser!</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#play">Play Now</a></li>
+                        <li><a href="#modes">Game Modes</a></li>
+                        <li><a href="#guide">How to Play</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Game Modes</h4>
+                    <ul>
+                        <li><a href="#bloxdhop">BloxdHop.io</a></li>
+                        <li><a href="#doodlecube">DoodleCube</a></li>
+                        <li><a href="#eviltower">EvilTower</a></li>
+                        <li><a href="#peaceful">Peaceful</a></li>
+                        <li><a href="#cubewarfare">CubeWarfare</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Bloxdio.xyz. All rights reserved. | <a href="https://bloxdio.xyz">Play Bloxd io</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

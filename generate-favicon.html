@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate Favicon</title>
+</head>
+<body>
+    <canvas id="favicon" width="32" height="32" style="border: 1px solid #ccc; image-rendering: pixelated;"></canvas>
+    <br><br>
+    <button onclick="downloadFavicon()">Download Favicon</button>
+    
+    <script>
+        const canvas = document.getElementById('favicon');
+        const ctx = canvas.getContext('2d');
+        
+        // 设置像素化渲染
+        ctx.imageSmoothingEnabled = false;
+        
+        // 背景
+        ctx.fillStyle = '#0a0a0a';
+        ctx.fillRect(0, 0, 32, 32);
+        
+        // 3D方块效果 - 主体
+        ctx.fillStyle = '#00ff88';
+        ctx.fillRect(4, 4, 24, 24);
+        
+        // 3D方块效果 - 顶部高光
+        ctx.fillStyle = '#00cc66';
+        ctx.fillRect(4, 4, 24, 4);
+        
+        // 3D方块效果 - 左侧高光
+        ctx.fillStyle = '#00cc66';
+        ctx.fillRect(4, 4, 4, 24);
+        
+        // 字母B - 像素艺术风格
+        ctx.fillStyle = '#ffffff';
+        
+        // B的竖线
+        ctx.fillRect(8, 8, 3, 16);
+        
+        // B的横线
+        ctx.fillRect(8, 8, 12, 3);
+        ctx.fillRect(8, 13, 12, 3);
+        ctx.fillRect(8, 21, 12, 3);
+        
+        // B的右侧竖线
+        ctx.fillRect(17, 8, 3, 7);
+        ctx.fillRect(17, 18, 3, 6);
+        
+        function downloadFavicon() {
+            const link = document.createElement('a');
+            link.download = 'favicon.ico';
+            link.href = canvas.toDataURL('image/png');
+            link.click();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Favicon for Bloxd io</title>
+    <style>
+        body {
+            background: #0a0a0a;
+            color: #00ff88;
+            font-family: monospace;
+            padding: 20px;
+        }
+        .favicon-preview {
+            display: inline-block;
+            width: 64px;
+            height: 64px;
+            background: #0a0a0a;
+            border: 2px solid #00ff88;
+            image-rendering: pixelated;
+        }
+        .download-section {
+            margin: 20px 0;
+        }
+        button {
+            background: #00ff88;
+            color: #0a0a0a;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            margin: 5px;
+        }
+        button:hover {
+            background: #00cc66;
+        }
+    </style>
+</head>
+<body>
+    <h1>🧱 Bloxd io Favicon Generator</h1>
+    <p>方块像素风格图标 - 绿色渐变主题</p>
+    
+    <div class="download-section">
+        <h3>预览 (64x64)</h3>
+        <canvas id="preview" class="favicon-preview" width="64" height="64"></canvas>
+    </div>
+    
+    <div class="download-section">
+        <h3>下载图标文件</h3>
+        <button onclick="downloadFavicon(16)">16x16 PNG</button>
+        <button onclick="downloadFavicon(32)">32x32 PNG</button>
+        <button onclick="downloadFavicon(48)">48x48 PNG</button>
+        <button onclick="downloadFavicon(64)">64x64 PNG</button>
+        <button onclick="downloadFavicon(128)">128x128 PNG</button>
+        <button onclick="downloadFavicon(256)">256x256 PNG</button>
+    </div>
+    
+    <div class="download-section">
+        <h3>使用说明</h3>
+        <ol>
+            <li>点击上面的按钮下载不同尺寸的图标</li>
+            <li>将16x16的PNG文件重命名为favicon.ico</li>
+            <li>将图标文件上传到网站根目录</li>
+            <li>更新HTML中的图标链接</li>
+        </ol>
+    </div>
+    
+    <script>
+        // 绘制像素艺术图标
+        function drawFavicon(canvas, size) {
+            const ctx = canvas.getContext('2d');
+            canvas.width = size;
+            canvas.height = size;
+            
+            // 设置像素化渲染
+            ctx.imageSmoothingEnabled = false;
+            
+            // 背景
+            ctx.fillStyle = '#0a0a0a';
+            ctx.fillRect(0, 0, size, size);
+            
+            // 计算缩放比例
+            const scale = size / 32;
+            const offset = Math.floor(4 * scale);
+            const blockSize = Math.floor(24 * scale);
+            
+            // 3D方块效果 - 主体
+            ctx.fillStyle = '#00ff88';
+            ctx.fillRect(offset, offset, blockSize, blockSize);
+            
+            // 3D方块效果 - 顶部高光
+            ctx.fillStyle = '#00cc66';
+            ctx.fillRect(offset, offset, blockSize, Math.floor(4 * scale));
+            
+            // 3D方块效果 - 左侧高光
+            ctx.fillStyle = '#00cc66';
+            ctx.fillRect(offset, offset, Math.floor(4 * scale), blockSize);
+            
+            // 字母B - 像素艺术风格
+            ctx.fillStyle = '#ffffff';
+            const letterOffset = Math.floor(8 * scale);
+            const letterSize = Math.floor(3 * scale);
+            const letterWidth = Math.floor(12 * scale);
+            
+            // B的竖线
+            ctx.fillRect(letterOffset, letterOffset, letterSize, Math.floor(16 * scale));
+            
+            // B的横线
+            ctx.fillRect(letterOffset, letterOffset, letterWidth, letterSize);
+            ctx.fillRect(letterOffset, Math.floor(13 * scale), letterWidth, letterSize);
+            ctx.fillRect(letterOffset, Math.floor(21 * scale), letterWidth, letterSize);
+            
+            // B的右侧竖线
+            ctx.fillRect(Math.floor(17 * scale), letterOffset, letterSize, Math.floor(7 * scale));
+            ctx.fillRect(Math.floor(17 * scale), Math.floor(18 * scale), letterSize, Math.floor(6 * scale));
+        }
+        
+        // 初始化预览
+        const previewCanvas = document.getElementById('preview');
+        drawFavicon(previewCanvas, 64);
+        
+        // 下载函数
+        function downloadFavicon(size) {
+            const canvas = document.createElement('canvas');
+            drawFavicon(canvas, size);
+            
+            const link = document.createElement('a');
+            link.download = `favicon-${size}x${size}.png`;
+            link.href = canvas.toDataURL('image/png');
+            link.click();
+        }
+        
+        // 自动生成所有尺寸
+        window.onload = function() {
+            console.log('Favicon generator ready!');
+            console.log('Click the buttons to download different sizes.');
+        };
+    </script>
+</body>
+</html>

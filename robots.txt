@@ -1,0 +1,32 @@
+User-agent: *
+Allow: /
+
+# Disallow admin or private areas (if any)
+Disallow: /admin/
+Disallow: /private/
+
+# Allow important pages
+Allow: /index.html
+Allow: /about.html
+Allow: /404.html
+
+# Sitemap
+Sitemap: https://bloxdio.xyz/sitemap.xml
+
+# Crawl delay (optional)
+Crawl-delay: 1
+
+# 主要页面
+Allow: /index.html
+Allow: /styles.css
+Allow: /script.js
+
+# 游戏资源
+Allow: /game/
+Allow: /assets/
+
+# 禁止访问
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*.log$
+Disallow: /temp/

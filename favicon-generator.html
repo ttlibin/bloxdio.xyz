@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloxd io Favicon Generator</title>
+    <style>
+        body {
+            background: #0a0a0a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: monospace;
+        }
+        
+        .favicon-container {
+            display: grid;
+            grid-template-columns: repeat(16, 1fr);
+            grid-template-rows: repeat(16, 1fr);
+            width: 128px;
+            height: 128px;
+            border: 2px solid #00ff88;
+            image-rendering: pixelated;
+        }
+        
+        .pixel {
+            width: 8px;
+            height: 8px;
+        }
+        
+        .bg { background: #0a0a0a; }
+        .green { background: #00ff88; }
+        .dark-green { background: #00cc66; }
+        .white { background: #ffffff; }
+        
+        .download-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background: #00ff88;
+            color: #0a0a0a;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <button class="download-btn" onclick="downloadFavicon()">Download Favicon</button>
+    
+    <div class="favicon-container" id="favicon">
+        <!-- 16x16像素网格 -->
+        <!-- 第1行 -->
+        <div class="pixel bg"></div><div class="pixel bg"></div><div class="pixel bg"></div><div class="pixel bg"></div><div class="pixel bg"></div><div class="pixel bg"></div><div class="pixel bg"></div><div class="pixel bg"></div><div class="pixel bg"></div><div class="pixel bg"></div><div class="pixel bg"></div><div class="pixel bg"></div><div class="pixel bg"></div><div class="pixel bg"></div><div class="pixel bg"></div><div class="pixel bg"></div>
+        <!-- 第2行 -->
+        <div class="pixel bg"></div><div class="pixel bg"></div><div class="pixel bg"></div><div class="pixel bg"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel bg"></div><div class="pixel bg"></div>
+        <!-- 第3行 -->
+        <div class="pixel bg"></div><div class="pixel bg"></div><div class="pixel bg"></div><div class="pixel bg"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel bg"></div><div class="pixel bg"></div>
+        <!-- 第4行 -->
+        <div class="pixel bg"></div><div class="pixel bg"></div><div class="pixel bg"></div><div class="pixel bg"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel bg"></div><div class="pixel bg"></div>
+        <!-- 第5行 -->
+        <div class="pixel bg"></div><div class="pixel bg"></div><div class="pixel bg"></div><div class="pixel bg"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel bg"></div><div class="pixel bg"></div>
+        <!-- 第6行 -->
+        <div class="pixel bg"></div><div class="pixel bg"></div><div class="pixel bg"></div><div class="pixel bg"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel bg"></div><div class="pixel bg"></div>
+        <!-- 第7行 -->
+        <div class="pixel bg"></div><div class="pixel bg"></div><div class="pixel bg"></div><div class="pixel bg"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel bg"></div><div class="pixel bg"></div>
+        <!-- 第8行 -->
+        <div class="pixel bg"></div><div class="pixel bg"></div><div class="pixel bg"></div><div class="pixel bg"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel bg"></div><div class="pixel bg"></div>
+        <!-- 第9行 -->
+        <div class="pixel bg"></div><div class="pixel bg"></div><div class="pixel bg"></div><div class="pixel bg"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel bg"></div><div class="pixel bg"></div>
+        <!-- 第10行 -->
+        <div class="pixel bg"></div><div class="pixel bg"></div><div class="pixel bg"></div><div class="pixel bg"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel bg"></div><div class="pixel bg"></div>
+        <!-- 第11行 -->
+        <div class="pixel bg"></div><div class="pixel bg"></div><div class="pixel bg"></div><div class="pixel bg"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel bg"></div><div class="pixel bg"></div>
+        <!-- 第12行 -->
+        <div class="pixel bg"></div><div class="pixel bg"></div><div class="pixel bg"></div><div class="pixel bg"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel bg"></div><div class="pixel bg"></div>
+        <!-- 第13行 -->
+        <div class="pixel bg"></div><div class="pixel bg"></div><div class="pixel bg"></div><div class="pixel bg"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel bg"></div><div class="pixel bg"></div>
+        <!-- 第14行 -->
+        <div class="pixel bg"></div><div class="pixel bg"></div><div class="pixel bg"></div><div class="pixel bg"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel bg"></div><div class="pixel bg"></div>
+        <!-- 第15行 -->
+        <div class="pixel bg"></div><div class="pixel bg"></div><div class="pixel bg"></div><div class="pixel bg"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel green"></div><div class="pixel bg"></div><div class="pixel bg"></div>
+        <!-- 第16行 -->
+        <div class="pixel bg"></div><div class="pixel bg"></div><div class="pixel bg"></div><div class="pixel bg"></div><div class="pixel bg"></div><div class="pixel bg"></div><div class="pixel bg"></div><div class="pixel bg"></div><div class="pixel bg"></div><div class="pixel bg"></div><div class="pixel bg"></div><div class="pixel bg"></div><div class="pixel bg"></div><div class="pixel bg"></div><div class="pixel bg"></div><div class="pixel bg"></div>
+    </div>
+    
+    <script>
+        function downloadFavicon() {
+            // 创建canvas
+            const canvas = document.createElement('canvas');
+            canvas.width = 32;
+            canvas.height = 32;
+            const ctx = canvas.getContext('2d');
+            
+            // 绘制像素艺术
+            ctx.fillStyle = '#0a0a0a';
+            ctx.fillRect(0, 0, 32, 32);
+            
+            // 绘制绿色方块
+            ctx.fillStyle = '#00ff88';
+            ctx.fillRect(4, 4, 24, 24);
+            
+            // 绘制3D效果
+            ctx.fillStyle = '#00cc66';
+            ctx.fillRect(4, 4, 24, 4);
+            ctx.fillRect(4, 4, 4, 24);
+            
+            // 绘制字母B
+            ctx.fillStyle = '#ffffff';
+            ctx.fillRect(8, 8, 3, 16);
+            ctx.fillRect(8, 8, 12, 3);
+            ctx.fillRect(8, 13, 12, 3);
+            ctx.fillRect(8, 21, 12, 3);
+            ctx.fillRect(17, 8, 3, 7);
+            ctx.fillRect(17, 18, 3, 6);
+            
+            // 下载
+            const link = document.createElement('a');
+            link.download = 'favicon.png';
+            link.href = canvas.toDataURL('image/png');
+            link.click();
+        }
+    </script>
+</body>
+</html>
